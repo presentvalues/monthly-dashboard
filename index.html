@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月记看板 ｜ 2026-06</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:12px;max-width:1200px;margin:0 auto}
+h1{text-align:center;font-size:18px;color:#f0f6fc;margin:8px 0 3px;letter-spacing:1px}
+.subtitle{text-align:center;font-size:11px;color:#6e7681;margin-bottom:14px}
+.section{margin-bottom:16px}
+.section-title{font-size:14px;font-weight:600;color:#f0f6fc;margin-bottom:8px;padding-left:8px;border-left:3px solid #58a6ff}
+.section-sub{font-size:11px;color:#6e7681;margin:0 0 8px 11px;font-weight:400;text-align:left}
+.chart-box{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px}
+.footer{text-align:center;font-size:10px;color:#484f58;margin-top:24px;padding:12px 0;border-top:1px solid #21262d}
+</style>
+</head>
+<body>
+
+<h1>月记看板 ｜ 2026-06</h1>
+<p class="subtitle">数据日期: 2026-06 ｜ 生成时间: 2026-08-04 16:54:51 ｜ 数据来源: 有知有行、中证红利全收益</p>
+
+<!-- ── 每月加权收益率 ── -->
+<div class="section">
+<div class="section-title">📈 每月加权收益率</div>
+<p class="section-sub">累计资金加权收益率 MWR：-7.29% ｜ 累计时间加权收益率 TWR：-11.59% ｜ 2021年4月至今</p>
+<div class="chart-box"><div id="monthly-return-chart" style="width:100%;height:420px"></div></div>
+</div>
+
+<div class="footer">PRESENTVALUES ｜ 辰影的自由之路</div>
+
+<script src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js" defer></script>
+<script>
+const D = {"title": "月记看板 ｜ 2026-06", "monthly_return": {"source": "有知有行", "start": "2021-04", "end": "2026-06", "count": 63, "months": [{"date": "2021-04", "twr": 0.0, "mwr": 0.0, "benchmark": 0.0, "csi_dividend": 0.0}, {"date": "2021-05", "twr": 4.6, "mwr": 4.6, "benchmark": 0.64, "csi_dividend": 5.78}, {"date": "2021-06", "twr": 4.98, "mwr": 4.9, "benchmark": 1.29, "csi_dividend": 5.93}, {"date": "2021-07", "twr": -1.72, "mwr": -2.19, "benchmark": 1.94, "csi_dividend": 1.67}, {"date": "2021-08", "twr": -5.93, "mwr": -6.54, "benchmark": 2.6, "csi_dividend": 12.92}, {"date": "2021-09", "twr": -2.93, "mwr": -3.33, "benchmark": 3.26, "csi_dividend": 10.13}, {"date": "2021-10", "twr": -3.06, "mwr": -3.43, "benchmark": 3.92, "csi_dividend": 4.31}, {"date": "2021-11", "twr": -4.03, "mwr": -4.42, "benchmark": 4.59, "csi_dividend": 6.0}, {"date": "2021-12", "twr": -2.3, "mwr": -2.57, "benchmark": 5.26, "csi_dividend": 9.48}, {"date": "2022-01", "twr": -10.66, "mwr": -11.41, "benchmark": 5.94, "csi_dividend": 5.28}, {"date": "2022-02", "twr": -9.84, "mwr": -10.44, "benchmark": 6.62, "csi_dividend": 9.68}, {"date": "2022-03", "twr": -16.36, "mwr": -17.43, "benchmark": 7.31, "csi_dividend": 11.45}, {"date": "2022-04", "twr": -18.78, "mwr": -19.96, "benchmark": 8.0, "csi_dividend": 5.59}, {"date": "2022-05", "twr": -22.31, "mwr": -23.74, "benchmark": 8.69, "csi_dividend": 8.07}, {"date": "2022-06", "twr": -10.65, "mwr": -9.93, "benchmark": 9.39, "csi_dividend": 10.44}, {"date": "2022-07", "twr": -19.72, "mwr": -20.46, "benchmark": 10.1, "csi_dividend": 8.67}, {"date": "2022-08", "twr": -18.93, "mwr": -19.32, "benchmark": 10.81, "csi_dividend": 10.73}, {"date": "2022-09", "twr": -27.99, "mwr": -29.84, "benchmark": 11.52, "csi_dividend": 7.8}, {"date": "2022-10", "twr": -39.96, "mwr": -43.9, "benchmark": 12.24, "csi_dividend": 1.02}, {"date": "2022-11", "twr": -26.99, "mwr": -28.31, "benchmark": 12.96, "csi_dividend": 13.38}, {"date": "2022-12", "twr": -16.33, "mwr": -14.96, "benchmark": 13.69, "csi_dividend": 9.08}, {"date": "2023-01", "twr": -6.95, "mwr": -3.6, "benchmark": 14.42, "csi_dividend": 12.93}, {"date": "2023-02", "twr": -13.28, "mwr": -11.19, "benchmark": 15.15, "csi_dividend": 16.21}, {"date": "2023-03", "twr": -13.18, "mwr": -10.99, "benchmark": 15.89, "csi_dividend": 14.66}, {"date": "2023-04", "twr": -13.39, "mwr": -11.18, "benchmark": 16.64, "csi_dividend": 20.07}, {"date": "2023-05", "twr": -17.35, "mwr": -15.85, "benchmark": 17.39, "csi_dividend": 16.5}, {"date": "2023-06", "twr": -13.3, "mwr": -10.64, "benchmark": 18.15, "csi_dividend": 15.51}, {"date": "2023-07", "twr": -7.94, "mwr": -3.81, "benchmark": 18.91, "csi_dividend": 22.75}, {"date": "2023-08", "twr": -10.41, "mwr": -7.17, "benchmark": 19.67, "csi_dividend": 17.98}, {"date": "2023-09", "twr": -16.74, "mwr": -15.78, "benchmark": 20.44, "csi_dividend": 20.42}, {"date": "2023-10", "twr": -16.9, "mwr": -15.79, "benchmark": 21.22, "csi_dividend": 16.66}, {"date": "2023-11", "twr": -16.27, "mwr": -14.58, "benchmark": 22.0, "csi_dividend": 16.91}, {"date": "2023-12", "twr": -20.67, "mwr": -21.03, "benchmark": 22.78, "csi_dividend": 16.0}, {"date": "2024-01", "twr": -32.76, "mwr": -38.73, "benchmark": 23.57, "csi_dividend": 18.56}, {"date": "2024-02", "twr": -22.53, "mwr": -23.11, "benchmark": 24.37, "csi_dividend": 26.46}, {"date": "2024-03", "twr": -21.67, "mwr": -21.59, "benchmark": 25.17, "csi_dividend": 25.68}, {"date": "2024-04", "twr": -16.31, "mwr": -13.5, "benchmark": 25.97, "csi_dividend": 28.64}, {"date": "2024-05", "twr": -15.91, "mwr": -12.75, "benchmark": 26.78, "csi_dividend": 33.57}, {"date": "2024-06", "twr": -18.45, "mwr": -16.44, "benchmark": 27.6, "csi_dividend": 28.79}, {"date": "2024-07", "twr": -23.75, "mwr": -24.24, "benchmark": 28.42, "csi_dividend": 25.38}, {"date": "2024-08", "twr": -22.71, "mwr": -22.41, "benchmark": 29.24, "csi_dividend": 21.4}, {"date": "2024-09", "twr": -0.83, "mwr": 10.83, "benchmark": 30.08, "csi_dividend": 40.24}, {"date": "2024-10", "twr": -3.84, "mwr": 6.13, "benchmark": 30.91, "csi_dividend": 31.01}, {"date": "2024-11", "twr": -5.0, "mwr": 4.33, "benchmark": 31.76, "csi_dividend": 33.0}, {"date": "2024-12", "twr": -3.8, "mwr": 6.07, "benchmark": 32.6, "csi_dividend": 37.76}, {"date": "2025-01", "twr": -9.05, "mwr": -1.68, "benchmark": 33.46, "csi_dividend": 33.79}, {"date": "2025-02", "twr": 1.63, "mwr": 13.97, "benchmark": 34.31, "csi_dividend": 31.65}, {"date": "2025-03", "twr": 3.6, "mwr": 16.8, "benchmark": 35.18, "csi_dividend": 34.06}, {"date": "2025-04", "twr": -0.31, "mwr": 10.77, "benchmark": 36.05, "csi_dividend": 32.62}, {"date": "2025-05", "twr": -4.0, "mwr": 5.04, "benchmark": 36.92, "csi_dividend": 35.91}, {"date": "2025-06", "twr": -4.66, "mwr": 4.02, "benchmark": 37.81, "csi_dividend": 37.57}, {"date": "2025-07", "twr": -3.0, "mwr": 6.48, "benchmark": 38.69, "csi_dividend": 41.15}, {"date": "2025-08", "twr": 2.54, "mwr": 14.68, "benchmark": 39.58, "csi_dividend": 42.7}, {"date": "2025-09", "twr": 2.85, "mwr": 15.05, "benchmark": 40.48, "csi_dividend": 41.13}, {"date": "2025-10", "twr": 2.36, "mwr": 14.2, "benchmark": 41.39, "csi_dividend": 45.75}, {"date": "2025-11", "twr": 1.16, "mwr": 12.34, "benchmark": 42.3, "csi_dividend": 43.82}, {"date": "2025-12", "twr": -0.67, "mwr": 9.59, "benchmark": 43.21, "csi_dividend": 42.94}, {"date": "2026-01", "twr": 1.7, "mwr": 13.0, "benchmark": 44.13, "csi_dividend": 48.31}, {"date": "2026-02", "twr": -0.99, "mwr": 9.0, "benchmark": 45.06, "csi_dividend": 51.77}, {"date": "2026-03", "twr": -1.43, "mwr": 8.25, "benchmark": 45.99, "csi_dividend": 49.22}, {"date": "2026-04", "twr": -0.29, "mwr": 9.92, "benchmark": 46.93, "csi_dividend": 52.93}, {"date": "2026-05", "twr": -1.97, "mwr": 7.31, "benchmark": 47.88, "csi_dividend": 46.34}, {"date": "2026-06", "twr": -11.59, "mwr": -7.29, "benchmark": 48.83, "csi_dividend": 33.19}]}, "generate_time": "2026-08-04 16:54:50"};
+
+function renderMonthly() {
+  const mr = D.monthly_return;
+  if (!mr || !mr.months || !mr.months.length) return;
+  const dates = mr.months.map(m => m.date.slice(2));  // 21-05 短格式
+  const chart = echarts.init(document.getElementById('monthly-return-chart'));
+  chart.setOption({
+    tooltip: { trigger: 'axis',
+      formatter: function(params) {
+        let s = '<b>' + mr.months[params[0].dataIndex].date + '</b><br/>';
+        params.forEach(p => s += p.marker + ' ' + p.seriesName + ': ' + (p.value>=0?'+':'') + p.value.toFixed(2) + '%<br/>');
+        return s;
+      } },
+    legend: { data: ['资金加权收益率','8%年化基准','中证红利全收益'], top: 0, textStyle: { color: '#c9d1d9' } },
+    grid: { left: '10%', right: '6%', top: '15%', bottom: '10%' },
+    xAxis: { type: 'category', data: dates, boundaryGap: false,
+      axisLabel: {
+        color: '#6e7681', fontSize: 10,
+        formatter: function(v, idx) {
+          const m = parseInt(v.slice(3), 10);
+          const q = {1:'Q1',4:'Q2',7:'Q3',10:'Q4'}[m];
+          if (q) return v.slice(0,2) + q;
+          return idx === 0 ? v.slice(0,2) + 'Q2' : '';
+        }
+      } },
+    yAxis: { type: 'value', scale: true, name: '累计收益率(%)',
+      nameTextStyle: { color: '#6e7681', fontSize: 10 },
+      axisLabel: { formatter: v => v.toFixed(0)+'%', color: '#6e7681', fontSize: 10 },
+      splitLine: { lineStyle: { color: '#21262d' } } },
+    series: [
+      { name: '资金加权收益率', type: 'line', data: mr.months.map(m => m.mwr),
+        lineStyle: { color: '#a371f7', width: 2 }, itemStyle: { color: '#a371f7' }, symbol: 'none' },
+      { name: '8%年化基准', type: 'line', data: mr.months.map(m => m.benchmark),
+        lineStyle: { color: '#e6edf3', width: 1, type: 'dashed' }, itemStyle: { color: '#e6edf3' }, symbol: 'none' },
+      { name: '中证红利全收益', type: 'line',
+        data: mr.months.map(m => (m.csi_dividend !== undefined ? m.csi_dividend : null)),
+        lineStyle: { color: '#e3b341', width: 1, type: 'dashed' }, itemStyle: { color: '#e3b341' }, symbol: 'none' }
+    ]
+  });
+  setTimeout(() => chart.resize(), 300);
+  window.addEventListener('resize', () => chart.resize());
+  window.addEventListener('orientationchange', () => setTimeout(() => chart.resize(), 500));
+}
+
+(function tryRender() {
+  if (typeof echarts !== 'undefined') { renderMonthly(); return; }
+  setTimeout(tryRender, 100);
+})();
+</script>
+</body>
+</html>
